@@ -96,7 +96,7 @@ public class Game extends JLabel implements MouseListener, Runnable {
         addMouseListener(this);
     }
     
-    private boolean isF() {
+    private boolean isFinished() {
         for (Pile f : foundation) {
             if (f.getComponentCount() < Card.Rank.values().length) {
                 return false;
@@ -176,7 +176,7 @@ public class Game extends JLabel implements MouseListener, Runnable {
                         }
                         
                         if (pile instanceof Tableau) {
-                            if (isF()) {
+                            if (isFinished()) {
                                 removeMouseListener(this);
                                 
                                 AUTO.setVisible(false);
@@ -209,12 +209,12 @@ public class Game extends JLabel implements MouseListener, Runnable {
     @Override
     public void run() {
         do {
-            for (Pile t : tableau) {
-                if (!t.isEmpty()) {
-                    Foundation f = this.foundation[t.getCard().getSuit().ordinal()];
+            for (Pile tableau : tableau) {
+                if (!tableau.isEmpty()) {
+                    Foundation foundation = this.foundation[tableau.getCard().getSuit().ordinal()];
                     
-                    if (t.getCard().getRank() == f.nextRank()) {
-                        f.setCard(t.getCard());
+                    if (tableau.getCard().getRank() == foundation.nextRank()) {
+                        foundation.setCard(tableau.getCard());
                         
                         repaint();
                         
@@ -224,7 +224,7 @@ public class Game extends JLabel implements MouseListener, Runnable {
                     }
                 }
             }
-        } while (!isF());
+        } while (!isFinished());
     }
     
 }
