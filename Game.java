@@ -68,7 +68,7 @@ public class Game extends JLabel implements MouseListener, Runnable {
                 }
             }
         });
-        waste.setBounds(INSET + 5 * (CARD_WIDTH + GAP) - 2 * STEP, INSET, STEP * 2 + CARD_WIDTH, CARD_HEIGHT);
+        waste.setBounds(INSET + 5 * (CARD_WIDTH + GAP) - 2 * STEP, INSET, 2 * STEP + CARD_WIDTH, CARD_HEIGHT);
         add(waste);
         
         for (int i = 0; i < foundation.length; i++) {
