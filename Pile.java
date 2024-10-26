@@ -7,8 +7,8 @@ public class Pile extends JLabel {
     
     public Pile() {}
     
-    public Pile(String s) {
-        super(s, JLabel.CENTER);
+    public Pile(String symbol) {
+        super(symbol, JLabel.CENTER);
         
         setForeground(new Color(-16740096));
     }
