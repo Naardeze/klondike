@@ -36,9 +36,9 @@ public class Klondike extends JFrame {
         JMenuBar menuBar = new JMenuBar();
         JMenu menu = new JMenu("Game");
         
-        for (GameType g : GameType.values()) {
-            menu.add(g.name()).addActionListener(e -> {
-                game = new Game(g);
+        for (GameType gameType : GameType.values()) {
+            menu.add(gameType.name()).addActionListener(e -> {
+                game = new Game(gameType);
                 
                 setContentPane(game);
                 validate();
