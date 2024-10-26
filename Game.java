@@ -97,8 +97,8 @@ public class Game extends JLabel implements MouseListener, Runnable {
     }
     
     private boolean isFinished() {
-        for (Pile f : foundation) {
-            if (f.getComponentCount() < Card.Rank.values().length) {
+        for (Pile foundation : foundation) {
+            if (foundation.getComponentCount() < Card.Rank.values().length) {
                 return false;
             }
         }
