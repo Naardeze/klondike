@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 
-public class Klondike extends JFrame {
+final public class Klondike extends JFrame {
     final public static JButton AUTO = new JButton("AUTO");
     
     public static enum GameType {
