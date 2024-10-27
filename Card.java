@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public class Card extends JLabel {
+final public class Card extends JLabel {
     final public static int CARD_WIDTH = 45;
     final public static int CARD_HEIGHT = 60;
     
