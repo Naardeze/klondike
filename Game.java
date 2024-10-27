@@ -17,7 +17,7 @@ import static klondike.Card.CARD_WIDTH;
 import static klondike.Klondike.AUTO;
 import klondike.Klondike.GameType;
 
-public class Game extends JLabel implements MouseListener, Runnable {
+final public class Game extends JLabel implements MouseListener, Runnable {
     final private static int INSET = 8;
     final private static int GAP = 1;
     final private static int STEP = 16;
